@@ -19,3 +19,21 @@
       command: 'claude-chat:copy-message'
     }
   ]
+
+'menu': [
+  {
+    label: 'Packages'
+    submenu: [
+      {
+        label: 'Claude Chat'
+        submenu: [
+          { label: 'Open', command: 'claude-chat:open' }
+          { label: 'Toggle', command: 'claude-chat:toggle' }
+          { label: 'New Chat', command: 'claude-chat:new-chat' }
+          { label: 'Open Latest', command: 'claude-chat:open-latest' }
+          { label: 'Settings', command: 'claude-chat:settings' }
+        ]
+      }
+    ]
+  }
+]
