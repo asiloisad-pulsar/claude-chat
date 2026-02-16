@@ -14,7 +14,7 @@
   'ctrl-4': 'claude-chat:mode-bypass'
   'alt-c': 'claude-chat:focus-active-editor'
 
-'.claude-chat-history atom-text-editor':
+'.claude-chat-history.select-list atom-text-editor':
   'ctrl-enter': 'claude-chat:open-keep-list'
   'ctrl-d': 'claude-chat:delete-session'
   'ctrl-0': 'claude-chat:toggle-all-sessions'

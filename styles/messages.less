@@ -54,19 +54,18 @@
       margin: @component-padding 0;
       font-size: 0.9em;
       border: 1px solid @tool-panel-border-color;
-      border-radius: 5px;
+      border-radius: @component-border-radius;
       overflow: hidden;
     }
 
     th, td {
-      padding: 6px 10px;
-      border-bottom: 1px solid @tool-panel-border-color;
-      border-right: 1px solid @tool-panel-border-color;
+      padding: 8px 12px;
+      border-bottom: 1px solid fade(@tool-panel-border-color, 60%);
       text-align: left;
     }
 
-    th:last-child, td:last-child {
-      border-right: none;
+    th + th, td + td {
+      border-left: 1px solid fade(@tool-panel-border-color, 40%);
     }
 
     tr:last-child td {
@@ -74,12 +73,23 @@
     }
 
     th {
-      background: @input-background-color;
+      background: fade(@background-color-highlight, 50%);
       font-weight: 600;
+      font-size: 0.95em;
+      color: @text-color-highlight;
+      border-bottom-color: @tool-panel-border-color;
     }
 
-    tr:nth-child(even) {
-      background: fade(@input-background-color, 30%);
+    tbody tr {
+      transition: background 0.1s ease;
+
+      &:nth-child(odd) {
+        background: fade(@background-color-highlight, 8%);
+      }
+
+      &:hover {
+        background: fade(@background-color-highlight, 20%);
+      }
     }
 
     p, ol, li {
@@ -90,9 +100,27 @@
       padding-left: 1.5em;
     }
 
+    // Task list (markdown checkboxes) - remove bullets
+    li:has(> input[type="checkbox"]) {
+      list-style: none;
+      margin-left: -1.5em;
+
+      > input[type="checkbox"] {
+        margin-right: 0.4em;
+      }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid @base-border-color;
+    }
+
     // Blockquote styles
     blockquote {
       margin: @component-padding 0;
+      padding: @component-padding / 2 @component-padding;
+      border-left: 3px solid @base-border-color;
+      background: fade(@background-color-highlight, 30%);
       border-radius: @component-border-radius;
       color: @text-color-subtle;
     }
