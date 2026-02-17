@@ -112,6 +112,13 @@
       ],
       "order": 3
     },
+    "streamingText": {
+      "title": "Streaming Text",
+      "description": "Show text as it streams in. When off, text appears only after the response is complete.",
+      "type": "boolean",
+      "default": true,
+      "order": 4
+    },
     "debugMode": {
       "title": "Debug Mode",
       "description": "Enable debug logging to console for troubleshooting",
