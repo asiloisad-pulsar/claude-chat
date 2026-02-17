@@ -486,6 +486,7 @@
     .tool-bash-content,
     .tool-task-content,
     .tool-preview,
+    .tool-question-content,
     .search-results {
       display: none;
     }
@@ -533,13 +534,53 @@
   }
 }
 
-.tool-askuser {
-  .tool-question {
-    flex: 1;
-    font-style: italic;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+// Question tool (AskUserQuestion / Question)
+.tool-question {
+  .tool-question-content {
+    margin-top: @component-padding;
+    padding: @component-padding;
+    background: @input-background-color;
+    border: 1px solid @tool-panel-border-color;
+    border-radius: 5px;
+  }
+
+  .question-block + .question-block {
+    margin-top: @component-padding;
+    padding-top: @component-padding;
+    border-top: 1px solid fade(@tool-panel-border-color, 50%);
+  }
+
+  .question-text {
+    font-weight: 500;
+    margin-bottom: @component-padding / 2;
+  }
+
+  .question-options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .question-option {
+    display: flex;
+    align-items: baseline;
+    gap: @component-padding;
+    padding: 4px @component-padding;
+    border-radius: @component-border-radius;
+    background: fade(@background-color-highlight, 30%);
+
+    .option-label {
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .option-description {
+      color: @text-color-subtle;
+      font-size: 0.9em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 

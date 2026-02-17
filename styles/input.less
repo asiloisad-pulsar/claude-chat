@@ -133,3 +133,73 @@
     flex-shrink: 0;
   }
 }
+
+// Question prompt UI (AskUserQuestion interactive answers)
+.question-prompt {
+  padding: @component-padding;
+  margin: @component-padding 0;
+  background: fade(@background-color-info, 10%);
+  border: 1px solid fade(@background-color-info, 30%);
+  border-radius: @component-border-radius;
+
+  .question-prompt-block + .question-prompt-block {
+    margin-top: @component-padding;
+    padding-top: @component-padding;
+    border-top: 1px solid fade(@background-color-info, 20%);
+  }
+
+  .question-prompt-header {
+    display: flex;
+    align-items: baseline;
+    gap: @component-padding / 2;
+    margin-bottom: @component-padding / 2;
+  }
+
+  .question-prompt-tag {
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: fade(@text-color-info, 20%);
+    color: @text-color-info;
+    flex-shrink: 0;
+  }
+
+  .question-prompt-text {
+    color: @text-color-highlight;
+    font-weight: 500;
+  }
+
+  .question-prompt-options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .question-prompt-option {
+    display: flex;
+    align-items: baseline;
+    gap: @component-padding;
+    text-align: left;
+    padding: 6px @component-padding;
+
+    .option-label {
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .option-description {
+      color: @text-color-subtle;
+      font-size: 0.9em;
+      font-weight: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &.question-prompt-other {
+      opacity: 0.7;
+      font-style: italic;
+    }
+  }
+}
