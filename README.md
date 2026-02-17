@@ -7,12 +7,16 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 ## Features
 
 - **Streaming responses**: Real-time text display as Claude responds.
-- **Markdown rendering**: Syntax highlighting for code blocks.
-- **Session persistence**: Conversations are saved and can be resumed.
+- **Markdown rendering**: Full markdown support with syntax-highlighted code blocks using tree-sitter grammars matching your editor theme.
+- **Tool visualization**: Rich display of tool calls (Read, Write, Edit, Bash, Glob, Grep, Task, etc.) with collapsible details, diffs, search results, and inline previews.
+- **Interactive permissions**: Allow/Deny prompts with "Always Allow" and permission mode suggestions. AskUserQuestion prompts render as interactive option cards with multi-question support.
+- **Clean interrupts**: Stop button sends interrupt signal for graceful abort instead of killing the process.
+- **Session persistence**: Conversations are saved and can be resumed across restarts.
 - **Chat history**: Browse and revisit previous sessions.
-- **Context extender**: Attach selections, files, or images to prompts.
-- **Permission modes**: Switch between permission levels.
-- **[pulsar-mcp](https://web.pulsar-edit.dev/packages/pulsar-mcp)**: Auto-connects MCP server for tool integration.
+- **Context attachments**: Attach selections, files, images, or tree-view paths to prompts.
+- **Permission modes**: Switch between Default, Plan, Accept Edits, and Bypass modes via keyboard shortcuts.
+- **LaTeX rendering**: Math expressions rendered via MathJax.
+- **[pulsar-mcp](https://web.pulsar-edit.dev/packages/pulsar-mcp)**: Auto-connects MCP server for editor tool integration.
 
 ## Installation
 
