@@ -581,6 +581,19 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
+    &.question-option-selected {
+      background: fade(@text-color-info, 15%);
+      border-left: 2px solid @text-color-info;
+
+      .option-label {
+        color: @text-color-info;
+      }
+    }
+
+    &.question-option-dimmed {
+      opacity: 0.4;
+    }
   }
 }
 

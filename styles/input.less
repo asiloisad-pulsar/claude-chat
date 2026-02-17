@@ -86,51 +86,79 @@
 // Permission prompt UI
 .permission-prompt {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: @component-padding;
   padding: @component-padding;
   margin: @component-padding 0;
-  background: fade(@background-color-warning, 15%);
-  border: 1px solid fade(@background-color-warning, 40%);
+  background: fade(@background-color-warning, 10%);
+  border: 1px solid fade(@background-color-warning, 30%);
+  border-left: 3px solid @text-color-warning;
   border-radius: @component-border-radius;
-  gap: @component-padding;
 
-  .permission-prompt-content {
+  .permission-prompt-header {
     display: flex;
     align-items: center;
     gap: @component-padding / 2;
-    flex: 1;
     min-width: 0;
   }
 
   .permission-prompt-icon {
-    font-size: 1.2em;
     color: @text-color-warning;
+    flex-shrink: 0;
+    margin-right: @component-padding / 2;
+  }
+
+  .permission-prompt-tool {
+    color: @text-color-highlight;
+    font-size: 1.05em;
     flex-shrink: 0;
   }
 
-  .permission-prompt-text {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-
-    strong {
-      color: @text-color-highlight;
-    }
-  }
-
-  .permission-prompt-details {
-    font-size: 0.85em;
+  .permission-prompt-desc {
     color: @text-color-subtle;
+    font-size: 0.9em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    min-width: 0;
+  }
+
+  .permission-prompt-command {
+    margin: 0;
+    padding: @component-padding / 2 @component-padding;
+    font-family: var(--editor-font-family);
+    font-size: 0.85em;
+    line-height: 1.4;
+    background: @input-background-color;
+    border: 1px solid @tool-panel-border-color;
+    border-radius: @component-border-radius;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 80px;
+    overflow-y: auto;
+  }
+
+  .permission-prompt-path {
+    display: block;
+    font-family: var(--editor-font-family);
+    font-size: 0.85em;
+    color: @text-color-subtle;
+    padding: 4px @component-padding;
+    background: fade(@input-background-color, 50%);
+    border-radius: @component-border-radius;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // Show end of path (filename) when truncated
+    direction: rtl;
+    text-align: left;
   }
 
   .permission-prompt-actions {
     display: flex;
-    gap: @component-padding / 2;
-    flex-shrink: 0;
+    gap: @component-padding;
+    border-top: 1px solid fade(@background-color-warning, 25%);
+    padding-top: @component-padding;
   }
 }
 
@@ -138,8 +166,9 @@
 .question-prompt {
   padding: @component-padding;
   margin: @component-padding 0;
-  background: fade(@background-color-info, 10%);
-  border: 1px solid fade(@background-color-info, 30%);
+  background: fade(@background-color-info, 8%);
+  border: 1px solid fade(@background-color-info, 25%);
+  border-left: 3px solid @text-color-info;
   border-radius: @component-border-radius;
 
   .question-prompt-block + .question-prompt-block {
@@ -151,16 +180,18 @@
   .question-prompt-header {
     display: flex;
     align-items: baseline;
-    gap: @component-padding / 2;
-    margin-bottom: @component-padding / 2;
+    gap: @component-padding;
+    margin-bottom: @component-padding;
   }
 
   .question-prompt-tag {
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: 600;
-    padding: 1px 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 6px;
     border-radius: 3px;
-    background: fade(@text-color-info, 20%);
+    background: fade(@text-color-info, 15%);
     color: @text-color-info;
     flex-shrink: 0;
   }
@@ -168,12 +199,24 @@
   .question-prompt-text {
     color: @text-color-highlight;
     font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .question-prompt-answer {
+    margin-left: auto;
+    font-size: 0.85em;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+    background: fade(@text-color-success, 15%);
+    color: @text-color-success;
+    flex-shrink: 0;
   }
 
   .question-prompt-options {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
   }
 
   .question-prompt-option {
@@ -181,7 +224,16 @@
     align-items: baseline;
     gap: @component-padding;
     text-align: left;
-    padding: 6px @component-padding;
+    padding: 7px @component-padding;
+    background: @input-background-color;
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+    transition: all 0.12s ease;
+
+    &:hover {
+      background: fade(@text-color-info, 15%);
+      border-color: @text-color-info;
+    }
 
     .option-label {
       font-weight: 500;
@@ -198,8 +250,25 @@
     }
 
     &.question-prompt-other {
-      opacity: 0.7;
-      font-style: italic;
+      align-self: flex-start;
+      background: transparent;
+      border: 1px dashed @base-border-color;
+      padding: 4px 12px;
+      font-size: 0.85em;
+
+      .option-label {
+        font-weight: normal;
+        color: @text-color-subtle;
+      }
+
+      &:hover {
+        border-color: @text-color-info;
+        background: fade(@text-color-info, 10%);
+
+        .option-label {
+          color: @text-color-info;
+        }
+      }
     }
   }
 }
