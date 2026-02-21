@@ -470,7 +470,7 @@
 }
 
 .welcome-title {
-  font-size: 1.8em;
+  font-size: 2.5em;
   font-weight: 600;
   margin: 0 0 @component-padding / 2;
   background: linear-gradient(
@@ -489,16 +489,22 @@
 }
 
 .welcome-subtitle {
-  font-size: 1.1em;
+  font-size: 1.2em;
   opacity: 0.6;
   margin: 0 0 @component-padding * 2;
 }
 
 .welcome-history-btn {
-  margin-bottom: @component-padding * 2;
+  margin-bottom: @component-padding;
+  width: 80%;
+  font-size: 1.3em !important;
 
   .icon {
     margin-right: @component-padding / 2;
+  }
+
+  &:last-of-type {
+    margin-bottom: @component-padding * 2;
   }
 }
 
@@ -535,7 +541,7 @@
     background: @input-background-color;
     border: 1px solid @base-border-color;
     border-radius: 3px;
-    padding: 1px 5px;
+    padding: 3px 3px;
     font-size: 0.9em;
     font-family: var(--editor-font-family);
     flex-shrink: 0;
