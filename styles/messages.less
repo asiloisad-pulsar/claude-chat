@@ -248,6 +248,7 @@
   &.dot-todowrite { background: #98c379; } // green
   &.dot-notebookedit { background: #e5c07b; } // yellow
   &.dot-question, &.dot-askuserquestion { background: #61afef; } // blue
+  &.dot-thinking { background: @text-color-info; }
 }
 
 // Timeline line connecting dots - extends to reach next dot
@@ -302,7 +303,7 @@
       width: 5px;
       height: 5px;
       border-radius: 50%;
-      background: @text-color-subtle;
+      background: @text-color-info;
       animation: bounce 1.4s ease-in-out infinite;
 
       &:nth-child(1) { animation-delay: 0s; }
@@ -329,20 +330,22 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  opacity: 0.8;
-  font-style: italic;
+  .loading-label {
+    font-weight: bold;
+    margin-right: 2px;
+  }
 
   .dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: @text-color-subtle;
+    background: @text-color-info;
     animation: bounce 1.4s ease-in-out infinite;
 
-    &:nth-child(1) { animation-delay: 0s; }
     &:nth-child(2) { animation-delay: 0.2s; }
     &:nth-child(3) { animation-delay: 0.4s; }
   }
+
 }
 
 @keyframes bounce {
@@ -356,97 +359,61 @@
   }
 }
 
-// Thinking block styles
-.thinking-block {
-  background: fade(@background-color-info, 15%);
-  border: 1px solid fade(@text-color-info, 30%);
-  border-radius: @component-border-radius;
-  margin-bottom: @component-padding;
-  font-size: 0.9em;
-
-  // Pull up when first child to align with timeline dot
-  // Compensates for thinking-header's 6px top padding
-  .message-assistant > &:first-child {
-    margin-top: -4px;
-  }
-
-  .thinking-header {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px @component-padding;
-    cursor: pointer;
-    color: @text-color-info;
-
-    .icon-light-bulb {
-      opacity: 0.8;
-    }
-
-    .thinking-label {
-      font-weight: 600;
-    }
-
-    .thinking-preview {
-      opacity: 0.6;
-      font-style: italic;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex: 1;
-    }
+// Thinking block — extends .message-tool (applied as dual class)
+.message-thinking {
+  .thinking-preview {
+    opacity: 0.6;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
   }
 
   .thinking-content {
-    border-top: 1px solid fade(@text-color-info, 20%);
-    padding: @component-padding;
-    max-height: 300px;
+    margin-top: @component-padding;
+    max-height: 500px;
     overflow-y: auto;
-
-    pre {
-      margin: 0;
-      padding: 0;
-      background: transparent;
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-size: 0.95em;
-      line-height: 1.4;
-      color: @text-color-subtle;
-    }
+    color: @text-color-subtle;
+    // font-size: 0.95em;
   }
 
-  // Collapsed state - hide preview when open
-  &[open] .thinking-preview {
+  // Collapsed: hide content
+  &.collapsed .thinking-content {
+    display: none;
+  }
+
+  // Expanded: hide preview
+  &:not(.collapsed) .thinking-preview {
     display: none;
   }
 }
 
-// Streaming thinking - always expanded, no details/summary
+// Streaming thinking
 .thinking-streaming {
-  .thinking-header {
+  .tool-name {
     cursor: default;
+    &:hover { text-decoration: none; }
+  }
 
-    .streaming-indicator {
-      display: inline-flex;
-      gap: 3px;
-      margin-left: 2px;
+  .streaming-indicator {
+    display: inline-flex;
+    gap: 3px;
+    margin-left: 2px;
 
-      .dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: @text-color-info;
-        animation: bounce 1.4s ease-in-out infinite;
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: @text-color-info;
+      animation: bounce 1.4s ease-in-out infinite;
 
-        &:nth-child(1) { animation-delay: 0s; }
-        &:nth-child(2) { animation-delay: 0.2s; }
-        &:nth-child(3) { animation-delay: 0.4s; }
-      }
+      &:nth-child(1) { animation-delay: 0s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.4s; }
     }
   }
 
-  .thinking-content {
-    border-top: 1px solid fade(@text-color-info, 20%);
-  }
 }
 
 // Welcome page animations
