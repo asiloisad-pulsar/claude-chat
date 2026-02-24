@@ -60,6 +60,15 @@ Commands available in `.claude-chat`:
 - `claude-chat:fold-all`: collapse all tool call details,
 - `claude-chat:clear-messages`: clear all messages.
 
+## Custom Provider
+
+You can use any OpenAI-compatible API provider (Ollama, LM Studio, OpenRouter, etc.) by configuring the following settings:
+
+1. Set **Model** to `custom` and enter the model name in **Custom Model** (e.g. `qwen3-coder`).
+2. Set **Custom API Base URL** to the provider endpoint (e.g. `http://localhost:11434` for Ollama).
+
+For providers that require an API key, set the `ANTHROPIC_API_KEY` environment variable in your shell before launching Pulsar. For Ollama and other local providers, no API key is needed.
+
 ## Chat history
 
 Chat sessions are stored in `~/.pulsar/claude-chat-sessions/` directory. Each session is saved as a JSON file containing messages, timestamps, project paths, and token usage.

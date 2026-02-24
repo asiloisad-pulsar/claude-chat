@@ -83,9 +83,24 @@
         "default",
         "sonnet",
         "opus",
-        "haiku"
+        "haiku",
+        "custom"
       ],
       "order": 2
+    },
+    "customModel": {
+      "title": "Custom Model",
+      "description": "Model name when 'custom' is selected (e.g. qwen3-coder, gpt-4o)",
+      "type": "string",
+      "default": "",
+      "order": 3
+    },
+    "customBaseUrl": {
+      "title": "Custom API Base URL",
+      "description": "Override the API endpoint (e.g. http://localhost:11434 for Ollama, or any OpenAI-compatible URL)",
+      "type": "string",
+      "default": "",
+      "order": 4
     },
     "permissionMode": {
       "title": "Permission Mode",
@@ -110,14 +125,14 @@
           "description": "Auto-accept all"
         }
       ],
-      "order": 3
+      "order": 5
     },
     "streamingText": {
       "title": "Streaming Text",
       "description": "Show text as it streams in. When off, text appears only after the response is complete.",
       "type": "boolean",
       "default": true,
-      "order": 4
+      "order": 6
     },
     "debugMode": {
       "title": "Debug Mode",
