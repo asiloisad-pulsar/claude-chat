@@ -60,6 +60,53 @@ Commands available in `.claude-chat`:
 - `claude-chat:fold-all`: collapse all tool call details,
 - `claude-chat:clear-messages`: clear all messages.
 
+## Customization
+
+The style can be adjusted according to user preferences in the `styles.less` file:
+
+- e.g. unlimited thinking block height:
+
+```less
+.claude-chat .message-thinking .thinking-content {
+  max-height: none;
+}
+```
+
+- e.g. taller diff sections:
+
+```less
+.claude-chat .message-tool .diff-section .diff-content {
+  max-height: 300px;
+}
+```
+
+- e.g. larger prompt editor:
+
+```less
+.claude-chat .editor-container atom-text-editor {
+  min-height: 100px;
+  max-height: 300px;
+}
+```
+
+- e.g. custom chat font size:
+
+```less
+.claude-chat .claude-chat-messages {
+  font-size: 14px;
+}
+```
+
+- e.g. custom timeline dot colors:
+
+```less
+.claude-chat {
+  .dot-bash { background: #c678dd; }
+  .dot-edit { background: #e5c07b; }
+  .dot-assistant { background: #61afef; }
+}
+```
+
 ## Custom Provider
 
 You can use any OpenAI-compatible API provider (Ollama, LM Studio, OpenRouter, etc.) by configuring the following settings:
