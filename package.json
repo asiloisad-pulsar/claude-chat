@@ -17,7 +17,7 @@
   "dependencies": {
     "@mathjax/src": "^4.0.0",
     "etch": "^0.14.1",
-    "pulsar-select-list": "^1.4.1"
+    "@asiloisad/select-list": "^1.5.0"
   },
   "activationCommands": {
     "atom-workspace": [
