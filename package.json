@@ -127,12 +127,33 @@
       ],
       "order": 5
     },
+    "effortMode": {
+      "title": "Effort Mode",
+      "description": "Default reasoning effort level",
+      "type": "string",
+      "default": "medium",
+      "enum": [
+        {
+          "value": "low",
+          "description": "Quick, less thorough responses"
+        },
+        {
+          "value": "medium",
+          "description": "Balanced effort"
+        },
+        {
+          "value": "high",
+          "description": "Thorough responses"
+        }
+      ],
+      "order": 6
+    },
     "streamingText": {
       "title": "Streaming Text",
       "description": "Show text as it streams in. When off, text appears only after the response is complete.",
       "type": "boolean",
       "default": true,
-      "order": 6
+      "order": 7
     },
     "debugMode": {
       "title": "Debug Mode",

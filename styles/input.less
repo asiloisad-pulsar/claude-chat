@@ -10,6 +10,7 @@
   background: @tool-panel-background-color;
 
   .editor-container {
+    position: relative;
     margin-bottom: @component-padding / 2;
     border: 1px solid @base-border-color;
     border-radius: @component-border-radius;
@@ -17,6 +18,36 @@
 
     &:focus-within {
       border-color: @accent-color;
+    }
+
+    .effort-mode {
+      position: absolute;
+      top: -4px;
+      right: 10px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+      padding: 0 4px;
+
+      .effort-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: mix(@text-color, @tool-panel-background-color, 15%);
+        transition: background 0.15s ease;
+      }
+
+      &.effort-low .effort-dot.active {
+        background: hsl(210, 80%, 55%);
+      }
+      &.effort-medium .effort-dot.active {
+        background: hsl(40, 90%, 50%);
+      }
+      &.effort-high .effort-dot.active {
+        background: hsl(0, 80%, 55%);
+      }
     }
 
     atom-text-editor {
@@ -81,6 +112,7 @@
   .permission-mode {
     margin-right: 8px;
   }
+
 }
 
 // Permission prompt UI
