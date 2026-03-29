@@ -375,6 +375,31 @@
     }
   }
 
+  // ToolSearch results
+  .toolsearch-results {
+    margin-top: @component-padding;
+    padding: @component-padding / 2 0;
+    background: fade(@background-color-highlight, 50%);
+    border: 1px solid @tool-panel-border-color;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 200px;
+  }
+
+  .toolsearch-entry {
+    padding: 2px @component-padding;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid fade(@tool-panel-border-color, 40%);
+    }
+  }
+
+  .toolsearch-name {
+    font-family: var(--editor-font-family);
+    font-size: 0.9em;
+    color: @text-color-highlight;
+  }
+
   // Search results (Glob/Grep)
   .search-results {
     margin-top: @component-padding;
