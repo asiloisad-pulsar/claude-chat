@@ -39,14 +39,8 @@
         transition: background 0.15s ease;
       }
 
-      &.effort-low .effort-dot.active {
-        background: hsl(210, 80%, 55%);
-      }
-      &.effort-medium .effort-dot.active {
-        background: hsl(40, 90%, 50%);
-      }
-      &.effort-high .effort-dot.active {
-        background: hsl(0, 80%, 55%);
+      .effort-dot.active {
+        background: @text-color-subtle;
       }
     }
 

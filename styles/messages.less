@@ -461,19 +461,6 @@
   margin: 0 0 @component-padding * 2;
 }
 
-.welcome-history-btn {
-  margin-bottom: @component-padding;
-  width: 80%;
-  font-size: 1.3em !important;
-
-  .icon {
-    margin-right: @component-padding / 2;
-  }
-
-  &:last-of-type {
-    margin-bottom: @component-padding * 2;
-  }
-}
 
 .welcome-tips {
   text-align: left;
@@ -502,6 +489,11 @@
     display: flex;
     align-items: baseline;
     gap: 8px;
+
+    &.tip-clickable {
+      cursor: pointer;
+      &:hover { opacity: 1; }
+    }
   }
 
   kbd {
@@ -514,6 +506,7 @@
     flex-shrink: 0;
     min-width: 90px;
     text-align: center;
+
   }
 
   &.tip-section-list {
