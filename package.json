@@ -15,9 +15,10 @@
     "atom": ">=1.100.0 <2.0.0"
   },
   "dependencies": {
+    "@asiloisad/select-list": "^1.5.0",
     "@mathjax/src": "^4.0.0",
-    "etch": "^0.14.1",
-    "@asiloisad/select-list": "^1.5.0"
+    "@preact/signals": "^2.9.0",
+    "preact": "^10.29.0"
   },
   "activationCommands": {
     "atom-workspace": [
