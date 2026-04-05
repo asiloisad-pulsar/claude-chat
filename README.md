@@ -32,6 +32,8 @@ Commands available in `atom-workspace`:
 - `claude-chat:toggle`: toggle chat panel,
 - `claude-chat:new-chat`: start a new chat session,
 - `claude-chat:open-latest`: open the most recent session,
+- `claude-chat:check-cli`: check if Claude CLI is available,
+- `claude-chat:update-cli`: update Claude CLI (disconnects all sessions first),
 - `claude-chat:settings`: open package settings.
 
 Commands available in `atom-text-editor:not([mini])`:

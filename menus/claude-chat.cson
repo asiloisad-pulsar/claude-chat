@@ -31,6 +31,7 @@
           { label: 'Toggle', command: 'claude-chat:toggle' }
           { label: 'New Chat', command: 'claude-chat:new-chat' }
           { label: 'Open Latest', command: 'claude-chat:open-latest' }
+          { label: 'Check CLI', command: 'claude-chat:check-cli' }
           { label: 'Update CLI', command: 'claude-chat:update-cli' }
           { label: 'Settings', command: 'claude-chat:settings' }
         ]
