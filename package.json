@@ -28,7 +28,8 @@
       "claude-chat:new-chat",
       "claude-chat:settings",
       "claude-chat:history",
-      "claude-chat:clear-history"
+      "claude-chat:clear-history",
+      "claude-chat:update-cli"
     ],
     "atom-text-editor:not([mini])": [
       "editor:attach-to-claude"
