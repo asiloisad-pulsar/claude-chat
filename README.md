@@ -18,11 +18,13 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 - **Context attachments**: Attach selections, files, images, or tree-view paths to prompts.
 - **Permission modes**: Switch between Default, Plan, Accept Edits, and Bypass modes via keyboard shortcuts.
 - **LaTeX rendering**: Math expressions rendered via MathJax.
-- **[pulsar-mcp](https://web.pulsar-edit.dev/packages/pulsar-mcp)**: Auto-connects MCP server for editor tool integration.
+- **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://web.pulsar-edit.dev/packages/pulsar-mcp).
 
 ## Installation
 
 To install `claude-chat` search for [claude-chat](https://web.pulsar-edit.dev/packages/claude-chat) in the Install pane of the Pulsar settings or run `ppm install claude-chat`. Alternatively, you can run `ppm install asiloisad/pulsar-claude-chat` to install a package directly from the GitHub repository.
+
+The Claude code terminal version is required. Please refer to the [Quickstart](https://code.claude.com/docs/en/quickstart) guide for more details.
 
 ## Commands
 
