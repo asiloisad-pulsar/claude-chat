@@ -1,7 +1,7 @@
 {
   "name": "claude-chat",
   "main": "./lib/main",
-  "version": "0.15.1",
+  "version": "0.15.2",
   "description": "Interactive chat panel for Claude Code",
   "keywords": [
     "claude",
