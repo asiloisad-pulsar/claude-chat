@@ -73,7 +73,8 @@
       "default": "right",
       "enum": [
         "right",
-        "left"
+        "left",
+        "center"
       ],
       "order": 1
     },
