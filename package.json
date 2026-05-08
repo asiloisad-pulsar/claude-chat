@@ -125,8 +125,12 @@
           "description": "Auto-accept file edits"
         },
         {
+          "value": "auto",
+          "description": "Auto-approve with background safety checks"
+        },
+        {
           "value": "bypassPermissions",
-          "description": "Auto-accept all"
+          "description": "Bypass permission checks"
         }
       ],
       "order": 5

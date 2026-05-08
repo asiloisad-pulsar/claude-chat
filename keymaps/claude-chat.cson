@@ -5,14 +5,14 @@
 '.claude-chat atom-text-editor':
   'enter': 'claude-chat:send'
   'shift-enter': 'editor:newline'
-  'escape': 'claude-chat:clear'
+  'escape': 'claude-chat:clear-prompt'
   'pageup': 'claude-chat:scroll-up'
   'pagedown': 'claude-chat:scroll-down'
   'ctrl-0': 'claude-chat:cycle-effort'
   'ctrl-1': 'claude-chat:mode-default'
   'ctrl-2': 'claude-chat:mode-plan'
   'ctrl-3': 'claude-chat:mode-accept-edits'
-  'ctrl-4': 'claude-chat:mode-bypass'
+  'ctrl-4': 'claude-chat:mode-auto'
   'alt-c': 'claude-chat:focus-active-editor'
 
 '.claude-chat-history.select-list atom-text-editor':
