@@ -46,7 +46,8 @@
     }
 
     // Icons in tool names
-    [class^="icon-"], [class*=" icon-"] {
+    [class^="icon-"],
+    [class*=" icon-"] {
       font-size: 0.9em;
       opacity: 0.8;
     }
@@ -327,12 +328,16 @@
 
   .diff-remove {
     background: fade(@text-color-error, 15%);
-    .diff-marker { color: @text-color-error; }
+    .diff-marker {
+      color: @text-color-error;
+    }
   }
 
   .diff-add {
     background: fade(@text-color-success, 15%);
-    .diff-marker { color: @text-color-success; }
+    .diff-marker {
+      color: @text-color-success;
+    }
   }
 
   // Todo list styles
@@ -363,15 +368,21 @@
 
     &.todo-completed {
       opacity: 0.6;
-      .todo-icon { color: @text-color-success; }
+      .todo-icon {
+        color: @text-color-success;
+      }
     }
 
     &.todo-in_progress {
-      .todo-icon { color: @text-color-info; }
+      .todo-icon {
+        color: @text-color-info;
+      }
     }
 
     &.todo-pending {
-      .todo-icon { opacity: 0.4; }
+      .todo-icon {
+        opacity: 0.4;
+      }
     }
   }
 
@@ -548,7 +559,9 @@
     font-size: 0.9em;
     color: @text-color-info;
     text-decoration: none;
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

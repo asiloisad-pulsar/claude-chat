@@ -106,9 +106,15 @@ The style can be adjusted according to user preferences in the `styles.less` fil
 
 ```less
 .claude-chat {
-  .dot-bash { background: #c678dd; }
-  .dot-edit { background: #e5c07b; }
-  .dot-assistant { background: #61afef; }
+  .dot-bash {
+    background: #c678dd;
+  }
+  .dot-edit {
+    background: #e5c07b;
+  }
+  .dot-assistant {
+    background: #61afef;
+  }
 }
 ```
 
@@ -147,8 +153,8 @@ In your main module:
 module.exports = {
   consumeClaudeChat(service) {
     this.claudeChat = service;
-  }
-}
+  },
+};
 ```
 
 ### `sendPrompt(text, options)`
@@ -166,11 +172,14 @@ await service.sendPrompt("Review this selection", {
     path: "src/app.js",
     line: 42,
     selections: [
-      { text: "const foo = bar()", range: { start: { row: 41, column: 0 }, end: { row: 41, column: 18 } } }
+      {
+        text: "const foo = bar()",
+        range: { start: { row: 41, column: 0 }, end: { row: 41, column: 18 } },
+      },
     ],
     label: "src/app.js:42",
-    icon: "code"
-  }
+    icon: "code",
+  },
 });
 
 // Without focusing the panel
@@ -178,6 +187,7 @@ await service.sendPrompt("Run tests", { focus: false });
 ```
 
 **Options:**
+
 - `attachContext` - Context to attach (selection, paths, position, image)
 - `focus` - Whether to focus the panel after sending (default: `true`)
 
@@ -192,11 +202,12 @@ service.setAttachContext({
   type: "paths",
   paths: ["relative/path/to/file.js"],
   label: "file.js",
-  icon: "file"
+  icon: "file",
 });
 ```
 
 **Context types:**
+
 - `paths` - File or directory paths
 - `selections` - Selections/cursors with `path`, `line`, `selections` array (empty text = cursor position)
 - `image` - Image file with optional region selection
@@ -226,6 +237,7 @@ disposable.dispose();
 ```
 
 **Message object:**
+
 - `role` - Always `"assistant"`
 - `content` - The response text
 - `thinking` - Extended thinking content (if enabled)

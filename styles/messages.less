@@ -58,13 +58,15 @@
       overflow: hidden;
     }
 
-    th, td {
+    th,
+    td {
       padding: 8px 12px;
       border-bottom: 1px solid fade(@tool-panel-border-color, 60%);
       text-align: left;
     }
 
-    th + th, td + td {
+    th + th,
+    td + td {
       border-left: 1px solid fade(@tool-panel-border-color, 40%);
     }
 
@@ -92,11 +94,14 @@
       }
     }
 
-    p, ol, li {
+    p,
+    ol,
+    li {
       margin-bottom: 1px;
     }
 
-    ul, ol {
+    ul,
+    ol {
       padding-left: 1.5em;
     }
 
@@ -144,9 +149,7 @@
         vertical-align: middle;
       }
     }
-
   }
-
 }
 
 // User message block wrapper - adds spacing between consecutive user messages
@@ -233,22 +236,53 @@
   background: @text-color-subtle;
   z-index: 2;
 
-  &.dot-assistant { background: #61afef; } // blue
-  &.dot-tool { background: #e5c07b; } // yellow
-  &.dot-error { background: #e06c75; } // red
+  &.dot-assistant {
+    background: #61afef;
+  } // blue
+  &.dot-tool {
+    background: #e5c07b;
+  } // yellow
+  &.dot-error {
+    background: #e06c75;
+  } // red
 
   // Tool-specific dot colors
-  &.dot-read { background: #56b6c2; } // cyan
-  &.dot-write { background: #98c379; } // green
-  &.dot-edit { background: #e5c07b; } // yellow
-  &.dot-bash { background: #c678dd; } // purple
-  &.dot-glob, &.dot-grep { background: #61afef; } // blue
-  &.dot-task { background: #d19a66; } // orange
-  &.dot-webfetch, &.dot-websearch { background: #56b6c2; } // cyan
-  &.dot-todowrite { background: #98c379; } // green
-  &.dot-notebookedit { background: #e5c07b; } // yellow
-  &.dot-question, &.dot-askuserquestion { background: #61afef; } // blue
-  &.dot-thinking { background: @text-color-info; }
+  &.dot-read {
+    background: #56b6c2;
+  } // cyan
+  &.dot-write {
+    background: #98c379;
+  } // green
+  &.dot-edit {
+    background: #e5c07b;
+  } // yellow
+  &.dot-bash {
+    background: #c678dd;
+  } // purple
+  &.dot-glob,
+  &.dot-grep {
+    background: #61afef;
+  } // blue
+  &.dot-task {
+    background: #d19a66;
+  } // orange
+  &.dot-webfetch,
+  &.dot-websearch {
+    background: #56b6c2;
+  } // cyan
+  &.dot-todowrite {
+    background: #98c379;
+  } // green
+  &.dot-notebookedit {
+    background: #e5c07b;
+  } // yellow
+  &.dot-question,
+  &.dot-askuserquestion {
+    background: #61afef;
+  } // blue
+  &.dot-thinking {
+    background: @text-color-info;
+  }
 }
 
 // Timeline line connecting dots - extends to reach next dot
@@ -306,9 +340,15 @@
       background: @text-color-info;
       animation: bounce 1.4s ease-in-out infinite;
 
-      &:nth-child(1) { animation-delay: 0s; }
-      &:nth-child(2) { animation-delay: 0.2s; }
-      &:nth-child(3) { animation-delay: 0.4s; }
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
     }
   }
 }
@@ -342,14 +382,19 @@
     background: @text-color-info;
     animation: bounce 1.4s ease-in-out infinite;
 
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.4s; }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
   }
-
 }
 
 @keyframes bounce {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: scale(0.6);
     opacity: 0.4;
   }
@@ -393,7 +438,9 @@
 .thinking-streaming {
   .tool-name {
     cursor: default;
-    &:hover { text-decoration: none; }
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .streaming-indicator {
@@ -408,18 +455,27 @@
       background: @text-color-info;
       animation: bounce 1.4s ease-in-out infinite;
 
-      &:nth-child(1) { animation-delay: 0s; }
-      &:nth-child(2) { animation-delay: 0.2s; }
-      &:nth-child(3) { animation-delay: 0.4s; }
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
     }
   }
-
 }
 
 // Welcome page animations
 @keyframes titleShimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 // Welcome page styles
@@ -461,7 +517,6 @@
   margin: 0 0 @component-padding * 2;
 }
 
-
 .welcome-tips {
   text-align: left;
 }
@@ -492,7 +547,9 @@
 
     &.tip-clickable {
       cursor: pointer;
-      &:hover { opacity: 1; }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -506,7 +563,6 @@
     flex-shrink: 0;
     min-width: 90px;
     text-align: center;
-
   }
 
   &.tip-section-list {
