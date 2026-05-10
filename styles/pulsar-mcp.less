@@ -65,40 +65,30 @@
   }
 
   // List container (editors, project paths)
-  .tool-mcp-list {
-    padding: @component-padding @component-padding;
-  }
-
   .mcp-list-item {
-    display: flex;
     align-items: center;
-    gap: @component-padding;
-    padding: @component-padding / 4 0;
+
+    .mcp-path {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .mcp-value,
+    .mcp-badge {
+      flex: 0 0 auto;
+    }
 
     &.mcp-active {
+      background: fade(@text-color-success, 8%);
+      box-shadow: inset 2px 0 0 @text-color-success;
+
       .mcp-path {
         font-weight: 500;
       }
     }
   }
 
-  .mcp-path {
-    font-family: var(--editor-font-family);
-    font-size: 0.9em;
-    color: @text-color;
-    text-decoration: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    &:hover {
-      color: @text-color-highlight;
-      text-decoration: underline;
-    }
-  }
-
   a.mcp-path {
-    color: @text-color-info;
     cursor: pointer;
   }
 
