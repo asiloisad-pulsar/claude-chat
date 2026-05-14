@@ -179,10 +179,17 @@
   }
 }
 
-// Attach badge shown in user messages (same style as attach-indicator)
+// Attach badges row shown in user messages
+.message-attach-tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @component-padding;
+  margin-bottom: @component-padding / 2;
+}
+
 .attach-badge {
   color: @text-color;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 2px 8px;
   border: 1px solid fade(@accent-color, 50%);
@@ -202,6 +209,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    direction: rtl;
+    text-align: left;
   }
 }
 

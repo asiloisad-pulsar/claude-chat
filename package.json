@@ -56,6 +56,11 @@
       "versions": {
         "^1.0.0": "consumeTreeView"
       }
+    },
+    "atom.file-icons": {
+      "versions": {
+        "1.0.0": "consumeClassIcons"
+      }
     }
   },
   "configSchema": {

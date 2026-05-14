@@ -9,6 +9,10 @@
   padding: @component-padding;
   background: @tool-panel-background-color;
 
+  .attach-tray {
+    margin-bottom: @component-padding;
+  }
+
   .editor-container {
     position: relative;
     margin-bottom: @component-padding / 2;
@@ -64,46 +68,54 @@
   }
 }
 
+.attach-tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @component-padding;
+}
+
+.attach-indicator {
+  color: @text-color;
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid fade(@accent-color, 50%);
+  border-radius: @component-border-radius;
+  font-size: 0.9em;
+  cursor: pointer;
+  max-width: 180px;
+  overflow: hidden;
+
+  &:hover {
+    background: fade(@accent-color, 25%);
+  }
+
+  .icon {
+    flex-shrink: 0;
+    opacity: 0.8;
+  }
+
+  .attach-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    text-align: left;
+  }
+}
+
 .claude-chat-toolbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  overflow: hidden;
   padding-top: (@component-padding / 2);
-  gap: @component-padding;
-
-  .attach-indicator {
-    color: @text-color;
-    display: flex;
-    align-items: center;
-    padding: 2px 8px;
-    border: 1px solid fade(@accent-color, 50%);
-    border-radius: @component-border-radius;
-    font-size: 0.9em;
-    cursor: pointer;
-    max-width: 180px;
-    overflow: hidden;
-
-    &:hover {
-      background: fade(@accent-color, 25%);
-    }
-
-    .icon {
-      flex-shrink: 0;
-      opacity: 0.8;
-    }
-
-    .attach-label {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
 
   .toolbar-actions {
     display: flex;
     align-items: center;
     gap: @component-padding / 2;
-    margin-left: auto; // Push to right
+    flex-shrink: 0;
   }
 
   .permission-mode {
