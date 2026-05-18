@@ -31,6 +31,7 @@ The Claude code terminal version is required. Please refer to the [Quickstart](h
 Commands available in `atom-workspace`:
 
 - `claude-chat:open`: open chat panel,
+- `claude-chat:toggle-focus`: <kbd>Alt+C</kbd> open and focus chat panel, or return focus to editor if already focused,
 - `claude-chat:toggle`: toggle chat panel,
 - `claude-chat:new-chat`: start a new chat session,
 - `claude-chat:open-latest`: open the most recent session,

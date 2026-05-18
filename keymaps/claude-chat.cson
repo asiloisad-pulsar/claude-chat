@@ -1,5 +1,5 @@
 'atom-workspace':
-  'alt-c': 'claude-chat:open'
+  'alt-c': 'claude-chat:toggle-focus'
   'alt-shift-c': 'claude-chat:history'
 
 '.claude-chat atom-text-editor':
@@ -13,7 +13,6 @@
   'ctrl-2': 'claude-chat:mode-plan'
   'ctrl-3': 'claude-chat:mode-accept-edits'
   'ctrl-4': 'claude-chat:mode-auto'
-  'alt-c': 'claude-chat:focus-active-editor'
 
 '.claude-chat-history.select-list atom-text-editor':
   'ctrl-enter': 'claude-chat:open-keep-list'

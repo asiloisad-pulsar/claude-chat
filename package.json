@@ -23,6 +23,7 @@
   "activationCommands": {
     "atom-workspace": [
       "claude-chat:open",
+      "claude-chat:toggle-focus",
       "claude-chat:open-latest",
       "claude-chat:toggle",
       "claude-chat:new-chat",
