@@ -261,6 +261,9 @@
   &.dot-error {
     background: #e06c75;
   } // red
+  &.dot-system {
+    background: @text-color-subtle;
+  }
 
   // Tool-specific dot colors
   &.dot-read {
@@ -381,6 +384,28 @@
   }
 }
 
+.message-system:not(.message-tool) {
+  color: @text-color-subtle;
+
+  .system-icon {
+    flex-shrink: 0;
+  }
+}
+
+.message-compact {
+  .compact-status {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    color: @text-color-subtle;
+  }
+
+  .compact-content {
+    margin-top: @component-padding;
+    color: @text-color-subtle;
+  }
+}
+
 .claude-chat-queue-zone {
   flex-shrink: 0;
   font-size: var(--editor-font-size);
@@ -476,11 +501,14 @@
 }
 
 .queued-message-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 28px;
   height: 28px;
   padding: 0;
   font-size: 1em;
-  line-height: 28px;
+  line-height: 1;
   text-align: center;
   opacity: 0.8;
 
