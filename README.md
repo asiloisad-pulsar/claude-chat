@@ -13,6 +13,7 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 - **Tool visualization**: Rich display of tool calls (Read, Write, Edit, Bash, Glob, Grep, Task, etc.) with collapsible details, diffs, search results, and inline previews.
 - **Interactive permissions**: Allow/Deny prompts with "Always Allow" and permission mode suggestions. AskUserQuestion prompts render as interactive option cards with multi-question support.
 - **Clean interrupts**: Stop button sends interrupt signal for graceful abort instead of killing the process.
+- **Queued messages**: Prompts sent while Claude is working are queued, shown above the prompt editor, and sent in order when the current response finishes or stops.
 - **Session persistence**: Conversations are saved and can be resumed across restarts.
 - **Chat history**: Browse and revisit previous sessions.
 - **Context attachments**: Attach selections, files, images, or tree-view paths to prompts.
@@ -56,6 +57,8 @@ Commands available in the prompt editor:
 - `claude-chat:scroll-down`: scroll chat output down,
 - `claude-chat:show-usage`: show token usage,
 - `claude-chat:focus-active-editor`: focus the active text editor.
+
+When Claude is already responding, `claude-chat:send` adds the prompt to the queue instead of sending it immediately. Queued prompts appear in the zone above the prompt editor; use the return-to-prompt icon to edit one again, or the delete icon to remove it from the queue.
 
 Commands available in `.claude-chat`:
 

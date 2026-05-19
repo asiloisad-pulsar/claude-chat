@@ -374,6 +374,114 @@
   }
 }
 
+.claude-chat-queue-zone {
+  flex-shrink: 0;
+  font-size: var(--editor-font-size);
+}
+
+.queued-messages {
+  max-height: 140px;
+  overflow-y: auto;
+  margin: 0;
+  padding: @component-padding / 2 @component-padding;
+  border: 0;
+  border-top: 1px solid fade(@base-border-color, 45%);
+  border-bottom: 1px solid fade(@base-border-color, 45%);
+  border-radius: 0;
+  background: fade(@tool-panel-background-color, 92%);
+}
+
+.queued-messages-header {
+  color: @text-color-subtle;
+  font-size: 0.78em;
+  font-weight: 600;
+  margin-bottom: @component-padding / 2;
+  text-transform: uppercase;
+}
+
+.queued-messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: @component-padding / 2;
+}
+
+.queued-message {
+  display: flex;
+  align-items: flex-start;
+  gap: @component-padding / 2;
+  padding: 4px 6px;
+  border: 1px solid fade(@base-border-color, 70%);
+  border-radius: @component-border-radius;
+  background: fade(@input-background-color, 65%);
+}
+
+.queued-message-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.queued-message-content {
+  max-height: 64px;
+  overflow: hidden;
+  color: fade(@text-color, 88%);
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.queued-message-content-empty {
+  color: @text-color-subtle;
+  font-style: italic;
+}
+
+.queued-message-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @component-padding / 2;
+  margin-bottom: 3px;
+}
+
+.queued-message-attach {
+  display: inline-flex;
+  align-items: center;
+  max-width: 180px;
+  padding: 1px 6px;
+  border: 1px solid fade(@base-border-color, 75%);
+  border-radius: @component-border-radius;
+  color: @text-color-subtle;
+  font-size: 0.9em;
+}
+
+.queued-message-attach .icon {
+  flex-shrink: 0;
+}
+
+.queued-message-attach-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queued-message-actions {
+  display: flex;
+  gap: @component-padding / 2;
+  flex-shrink: 0;
+}
+
+.queued-message-action {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 1em;
+  line-height: 28px;
+  text-align: center;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 // Loading indicator with bouncing dots
 .loading-indicator {
   display: flex;
