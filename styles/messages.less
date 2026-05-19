@@ -174,11 +174,13 @@
   .message-role {
     color: @text-color-info;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 6px;
 
     .message-role-label {
       cursor: default;
+      flex-shrink: 0;
     }
   }
 }
@@ -187,8 +189,9 @@
 .message-attach-tray {
   display: flex;
   flex-wrap: wrap;
-  gap: @component-padding;
-  margin-bottom: @component-padding / 2;
+  gap: 4px;
+  margin-bottom: 0;
+  min-width: 0;
 }
 
 .attach-badge {
