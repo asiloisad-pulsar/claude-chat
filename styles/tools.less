@@ -356,10 +356,17 @@
     align-items: flex-start;
     gap: @component-padding / 2;
     padding: 2px 0;
+    line-height: 1.4;
 
     .todo-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.2em;
+      height: 1.4em;
       flex-shrink: 0;
-      margin-top: 2px;
+      margin-right: (@component-padding / 2);
+      text-align: center;
     }
 
     .todo-content {
@@ -379,9 +386,11 @@
       }
     }
 
-    &.todo-pending {
+    &.todo-pending,
+    &.todo-queued,
+    &.todo-queue {
       .todo-icon {
-        opacity: 0.4;
+        opacity: 0.55;
       }
     }
   }
