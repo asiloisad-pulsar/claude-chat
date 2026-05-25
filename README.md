@@ -19,7 +19,7 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 - **Context attachments**: Attach selections, files, images, or tree-view paths to prompts.
 - **Permission modes**: Switch between Default, Plan, Accept Edits, and Auto via keyboard shortcuts; restart explicitly for Bypass mode.
 - **LaTeX rendering**: Math expressions rendered via MathJax.
-- **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://web.pulsar-edit.dev/packages/pulsar-mcp).
+- **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp).
 
 ## Installation
 
@@ -32,7 +32,7 @@ The Claude code terminal version is required. Please refer to the [Quickstart](h
 Commands available in `atom-workspace`:
 
 - `claude-chat:open`: open chat panel,
-- `claude-chat:toggle-focus`: <kbd>Alt+C</kbd> open and focus chat panel, or return focus to editor if already focused,
+- `claude-chat:toggle-focus`: open and focus chat panel, or return focus to editor if already focused,
 - `claude-chat:toggle`: toggle chat panel,
 - `claude-chat:new-chat`: start a new chat session,
 - `claude-chat:open-latest`: open the most recent session,
@@ -248,11 +248,11 @@ disposable.dispose();
 
 ## Consumed Service `pulsar-mcp`
 
-Auto-connects the [pulsar-mcp](https://web.pulsar-edit.dev/packages/pulsar-mcp) MCP server when starting a Claude session. When the service is available, the bridge port and server path are passed to the Claude CLI via `--mcp-config`, giving Claude direct access to editor tools (read/write text, open files, manage selections, etc.).
+Auto-connects the [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp) MCP server when starting a Claude session. When the service is available, the bridge port and server path are passed to the Claude CLI via `--mcp-config`, giving Claude direct access to editor tools (read/write text, open files, manage selections, etc.).
 
 ## Consumed Service `tree-view`
 
-Reads selected file and folder paths from [tree-view-plus](https://web.pulsar-edit.dev/packages/tree-view-plus). Used by the `tree-view:attach-to-claude` command to attach selected entries as context for the chat prompt.
+Reads selected file and folder paths from [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus). Used by the `tree-view:attach-to-claude` command to attach selected entries as context for the chat prompt.
 
 ## Contributing
 
