@@ -30,6 +30,7 @@
           { label: 'Open', command: 'claude-chat:open' }
           { label: 'Toggle', command: 'claude-chat:toggle' }
           { label: 'New Chat', command: 'claude-chat:new-chat' }
+          { label: 'Fork Session', command: 'claude-chat:fork-session' }
           { label: 'Open Latest', command: 'claude-chat:open-latest' }
           { label: 'Check CLI', command: 'claude-chat:check-cli' }
           { label: 'Update CLI', command: 'claude-chat:update-cli' }
