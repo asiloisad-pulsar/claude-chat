@@ -27,6 +27,7 @@
       "claude-chat:open-latest",
       "claude-chat:toggle",
       "claude-chat:new-chat",
+      "claude-chat:new-worktree-session",
       "claude-chat:fork-session",
       "claude-chat:settings",
       "claude-chat:history",

@@ -35,6 +35,7 @@ Commands available in `atom-workspace`:
 - `claude-chat:toggle-focus`: open and focus chat panel, or return focus to editor if already focused,
 - `claude-chat:toggle`: toggle chat panel,
 - `claude-chat:new-chat`: start a new chat session,
+- `claude-chat:new-worktree-session`: start a new session in a fresh git worktree (prompts for an optional name),
 - `claude-chat:fork-session`: branch off a copy of the current session under a new ID, keeping the existing transcript,
 - `claude-chat:open-latest`: open the most recent session,
 - `claude-chat:check-cli`: check if Claude CLI is available,
