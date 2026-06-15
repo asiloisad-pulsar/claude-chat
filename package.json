@@ -90,9 +90,8 @@
       "title": "Model",
       "description": "Claude model to use",
       "type": "string",
-      "default": "default",
+      "default": "sonnet",
       "enum": [
-        "default",
         "sonnet",
         "opus",
         "haiku",
