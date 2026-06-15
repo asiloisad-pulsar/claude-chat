@@ -58,7 +58,7 @@ Commands available in the prompt editor:
 - `claude-chat:show-usage`: show token usage,
 - `claude-chat:focus-active-editor`: focus the active text editor.
 
-When Claude is already responding, `claude-chat:send` adds the prompt to the queue instead of sending it immediately. Queued prompts appear in the zone above the prompt editor; use the return-to-prompt icon to edit one again, or the delete icon to remove it from the queue.
+When Claude is already responding, `claude-chat:send` adds the prompt to the queue instead of sending it immediately. Queued prompts appear in the zone above the prompt editor; use the send-now icon to inject one into the running response (steering), the return-to-prompt icon to edit one again, or the delete icon to remove it from the queue.
 
 Commands available in `.claude-chat`:
 
