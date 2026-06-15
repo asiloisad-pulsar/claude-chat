@@ -94,6 +94,7 @@
         "sonnet",
         "opus",
         "haiku",
+        "fable",
         "custom"
       ],
       "order": 2
