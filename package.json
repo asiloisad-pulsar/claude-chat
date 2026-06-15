@@ -158,6 +158,14 @@
         {
           "value": "high",
           "description": "Thorough responses"
+        },
+        {
+          "value": "xhigh",
+          "description": "Extra-high effort for coding and agentic tasks"
+        },
+        {
+          "value": "max",
+          "description": "Maximum effort; correctness over cost"
         }
       ],
       "order": 6
