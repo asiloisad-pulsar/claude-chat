@@ -17,7 +17,7 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 - **Session persistence**: Conversations are saved and can be resumed across restarts.
 - **Chat history**: Browse and revisit previous sessions.
 - **Context attachments**: Attach selections, files, images, or tree-view paths to prompts.
-- **Permission modes**: Switch between Default, Plan, Accept Edits, and Auto via keyboard shortcuts; restart explicitly for Bypass mode.
+- **Permission modes**: Switch between Ask permissions, Accept edits, Plan mode, and Auto mode via keyboard shortcuts; restart explicitly for Bypass mode.
 - **LaTeX rendering**: Math expressions rendered via MathJax.
 - **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp).
 
