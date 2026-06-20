@@ -438,6 +438,7 @@
 }
 
 .queued-message {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: @component-padding / 2;
@@ -445,6 +446,52 @@
   border: 1px solid fade(@base-border-color, 70%);
   border-radius: @component-border-radius;
   background: fade(@input-background-color, 65%);
+
+  &.queued-message-dragging {
+    opacity: 0.55;
+  }
+
+  &.queued-message-drop-before::before,
+  &.queued-message-drop-after::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    border-radius: 2px;
+    background: @background-color-info;
+    pointer-events: none;
+  }
+
+  &.queued-message-drop-before::before {
+    top: -(@component-padding / 4);
+  }
+
+  &.queued-message-drop-after::after {
+    bottom: -(@component-padding / 4);
+  }
+}
+
+.queued-message-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 28px;
+  padding: 0;
+  flex-shrink: 0;
+  color: @text-color-subtle;
+  cursor: grab;
+  opacity: 0.75;
+
+  &:hover {
+    color: @text-color;
+    opacity: 1;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .queued-message-body {
