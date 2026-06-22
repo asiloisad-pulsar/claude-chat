@@ -221,6 +221,23 @@
   }
 }
 
+.message-image-tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @component-padding / 2;
+  margin-top: @component-padding / 2;
+}
+
+.message-image-thumb {
+  width: 96px;
+  height: 96px;
+  border: 1px solid @base-border-color;
+  border-radius: @component-border-radius;
+  object-fit: cover;
+  background: @input-background-color;
+  cursor: pointer;
+}
+
 // Response sequence with timeline
 .response-sequence {
   margin: @component-padding 0;
@@ -539,6 +556,23 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.queued-message-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @component-padding / 2;
+  margin-bottom: 3px;
+}
+
+.queued-message-image-thumb {
+  width: 42px;
+  height: 42px;
+  border: 1px solid fade(@base-border-color, 75%);
+  border-radius: @component-border-radius;
+  object-fit: cover;
+  background: @input-background-color;
+  cursor: pointer;
 }
 
 .queued-message-actions {

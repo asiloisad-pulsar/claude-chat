@@ -64,6 +64,11 @@
       "versions": {
         "1.0.0": "consumeClassIcons"
       }
+    },
+    "image-editor": {
+      "versions": {
+        "1.0.0": "consumeImageEditor"
+      }
     }
   },
   "configSchema": {

@@ -17,6 +17,7 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 - **Session persistence**: Conversations are saved and can be resumed across restarts.
 - **Chat history**: Browse and revisit previous sessions.
 - **Context attachments**: Attach selections, files, images, or tree-view paths to prompts.
+- **Image paste**: Paste screenshots or copied images directly into the prompt. Images are sent inline to Claude Code without temporary files; click a thumbnail to preview it with `image-editor` when available.
 - **Permission modes**: Switch between Ask permissions, Accept edits, Plan mode, and Auto mode via keyboard shortcuts; restart explicitly for Bypass mode.
 - **LaTeX rendering**: Math expressions rendered via MathJax.
 - **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp).
@@ -255,6 +256,10 @@ Auto-connects the [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp) M
 ## Consumed Service `tree-view`
 
 Reads selected file and folder paths from [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus). Used by the `tree-view:attach-to-claude` command to attach selected entries as context for the chat prompt.
+
+## Consumed Service `image-editor`
+
+Uses the optional [image-editor](https://github.com/asiloisad/pulsar-image-editor) service to preview pasted image attachments. When available, clicking a pasted image thumbnail opens the in-memory data URL with `image-editor.openFromDataUrl(dataUrl, title)` without writing a temporary file.
 
 ## Contributing
 

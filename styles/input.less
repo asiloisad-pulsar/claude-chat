@@ -13,6 +13,10 @@
     margin-bottom: @component-padding;
   }
 
+  .pasted-image-tray {
+    margin-bottom: @component-padding;
+  }
+
   .editor-container {
     position: relative;
     margin-bottom: @component-padding / 2;
@@ -97,6 +101,41 @@
     direction: rtl;
     text-align: left;
   }
+}
+
+.pasted-image-tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @component-padding / 2;
+}
+
+.pasted-image-item {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.pasted-image-thumb {
+  width: 64px;
+  height: 64px;
+  border: 1px solid @base-border-color;
+  border-radius: @component-border-radius;
+  object-fit: cover;
+  background: @input-background-color;
+  cursor: pointer;
+}
+
+.pasted-image-remove {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border-radius: 50%;
 }
 
 .claude-chat-toolbar {
