@@ -403,9 +403,24 @@
 
 .message-system:not(.message-tool) {
   color: @text-color-subtle;
+  display: flex;
+  align-items: baseline;
+  gap: @component-padding / 2;
 
   .system-icon {
     flex-shrink: 0;
+  }
+
+  .system-text {
+    min-width: 0;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
