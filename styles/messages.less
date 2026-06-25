@@ -483,6 +483,12 @@
     opacity: 0.55;
   }
 
+  &.queued-message-frozen {
+    border-style: dashed;
+    border-color: fade(@background-color-info, 70%);
+    background: fade(@background-color-info, 8%);
+  }
+
   &.queued-message-drop-before::before,
   &.queued-message-drop-after::after {
     content: "";
@@ -529,6 +535,7 @@
 .queued-message-body {
   flex: 1;
   min-width: 0;
+  padding-left: @component-padding / 2;
 }
 
 .queued-message-content {
@@ -611,6 +618,11 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.queued-message-action-frozen {
+  color: @background-color-info;
+  opacity: 1;
 }
 
 // Loading indicator with bouncing dots
