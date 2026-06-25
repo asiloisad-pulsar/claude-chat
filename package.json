@@ -17,8 +17,8 @@
   "dependencies": {
     "@asiloisad/select-list": "^1.6.0",
     "@mathjax/src": "^4.0.0",
-    "@preact/signals": "^2.9.0",
-    "preact": "^10.29.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "activationCommands": {
     "atom-workspace": [
