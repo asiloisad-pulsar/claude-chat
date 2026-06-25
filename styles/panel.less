@@ -14,3 +14,12 @@
   padding: @component-padding;
   font-size: var(--editor-font-size);
 }
+
+// Wrapper observed by the auto-scroll ResizeObserver; its height tracks the full
+// message content so the list can stay pinned to the bottom. flow-root keeps
+// child margins contained (identical spacing to having no wrapper).
+.claude-chat-messages-content {
+  display: flow-root;
+  // Breathing room below the last message so it isn't flush against the input.
+  padding-bottom: @component-padding * 8;
+}
