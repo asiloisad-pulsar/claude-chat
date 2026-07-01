@@ -92,22 +92,15 @@
       "order": 1
     },
     "model": {
-      "title": "Model",
-      "description": "Claude model to use",
+      "title": "Default Model",
+      "description": "Default Claude model for new chat panels. Supports 'model-id | display name # description'. Use the toolbar selector to change the active panel.",
       "type": "string",
       "default": "sonnet",
-      "enum": [
-        "sonnet",
-        "opus",
-        "haiku",
-        "fable",
-        "custom"
-      ],
       "order": 2
     },
-    "customModel": {
-      "title": "Custom Model",
-      "description": "Model name when 'custom' is selected (e.g. qwen3-coder, gpt-4o)",
+    "customModels": {
+      "title": "Custom Models",
+      "description": "Additional model ids for the model picker. Separate entries with newlines or commas. Optional format: 'model-id | display name # description'.",
       "type": "string",
       "default": "",
       "order": 3

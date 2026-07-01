@@ -129,8 +129,11 @@ The style can be adjusted according to user preferences in the `styles.less` fil
 
 You can use any OpenAI-compatible API provider (Ollama, LM Studio, OpenRouter, etc.) by configuring the following settings:
 
-1. Set **Model** to `custom` and enter the model name in **Custom Model** (e.g. `qwen3-coder`).
-2. Set **Custom API Base URL** to the provider endpoint (e.g. `http://localhost:11434` for Ollama).
+1. Add model ids to **Custom Models** (e.g. `qwen3-coder`, `qwen3-coder # Local coding model`, or `qwen3-coder | Qwen Coder # Local coding model`).
+2. Pick the model from the chat toolbar model selector, or set **Default Model** for new chats using the same `model | name # description` format.
+3. Set **Custom API Base URL** to the provider endpoint (e.g. `http://localhost:11434` for Ollama).
+
+For current Claude model names and aliases, see the [Claude models overview](https://platform.claude.com/docs/en/about-claude/models/overview).
 
 For providers that require an API key, set the `ANTHROPIC_API_KEY` environment variable in your shell before launching Pulsar. For Ollama and other local providers, no API key is needed.
 
