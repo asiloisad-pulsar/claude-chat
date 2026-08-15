@@ -9,7 +9,7 @@
     "chat",
     "assistant"
   ],
-  "repository": "https://github.com/asiloisad/pulsar-claude-chat",
+  "repository": "https://github.com/asiloisad-pulsar/claude-chat",
   "license": "MIT",
   "engines": {
     "atom": ">=1.100.0 <2.0.0"

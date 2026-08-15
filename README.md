@@ -2,9 +2,9 @@
 
 Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-code). Provides a conversational interface with streaming responses, markdown rendering, and session management.
 
-![panel-1](https://github.com/asiloisad/pulsar-claude-chat/blob/master/assets/panel-1.png?raw=true)
+![panel-1](https://github.com/asiloisad-pulsar/claude-chat/blob/master/assets/panel-1.png?raw=true)
 
-![panel-2](https://github.com/asiloisad/pulsar-claude-chat/blob/master/assets/panel-2.gif?raw=true)
+![panel-2](https://github.com/asiloisad-pulsar/claude-chat/blob/master/assets/panel-2.gif?raw=true)
 
 ## Features
 
@@ -20,7 +20,7 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 - **Image paste**: Paste screenshots or copied images directly into the prompt. Images are sent inline to Claude Code without temporary files; click a thumbnail to preview it with `image-editor` when available.
 - **Permission modes**: Switch between Ask permissions, Accept edits, Plan mode, and Auto mode via keyboard shortcuts; restart explicitly for Bypass mode.
 - **LaTeX rendering**: Math expressions rendered via MathJax.
-- **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp).
+- **MCP integration**: Auto-connects MCP server for editor tool integration, via [pulsar-mcp](https://github.com/asiloisad-pulsar/pulsar-mcp).
 
 ## Installation
 
@@ -254,15 +254,15 @@ disposable.dispose();
 
 ## Consumed Service `pulsar-mcp`
 
-Auto-connects the [pulsar-mcp](https://github.com/asiloisad/pulsar-pulsar-mcp) MCP server when starting a Claude session. When the service is available, the bridge port and server path are passed to the Claude CLI via `--mcp-config`, giving Claude direct access to editor tools (read/write text, open files, manage selections, etc.).
+Auto-connects the [pulsar-mcp](https://github.com/asiloisad-pulsar/pulsar-mcp) MCP server when starting a Claude session. When the service is available, the bridge port and server path are passed to the Claude CLI via `--mcp-config`, giving Claude direct access to editor tools (read/write text, open files, manage selections, etc.).
 
 ## Consumed Service `tree-view`
 
-Reads selected file and folder paths from [tree-view-plus](https://github.com/asiloisad/pulsar-tree-view-plus). Used by the `tree-view:attach-to-claude` command to attach selected entries as context for the chat prompt.
+Reads selected file and folder paths from [tree-view-plus](https://github.com/asiloisad-pulsar/tree-view-plus). Used by the `tree-view:attach-to-claude` command to attach selected entries as context for the chat prompt.
 
 ## Consumed Service `image-editor`
 
-Uses the optional [image-editor](https://github.com/asiloisad/pulsar-image-editor) service to preview pasted image attachments. When available, clicking a pasted image thumbnail opens the in-memory data URL with `image-editor.openFromDataUrl(dataUrl, title)` without writing a temporary file.
+Uses the optional [image-editor](https://github.com/asiloisad-pulsar/image-editor) service to preview pasted image attachments. When available, clicking a pasted image thumbnail opens the in-memory data URL with `image-editor.openFromDataUrl(dataUrl, title)` without writing a temporary file.
 
 ## Contributing
 
