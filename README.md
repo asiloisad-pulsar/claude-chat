@@ -24,7 +24,7 @@ Interactive chat panel for [Claude Code](https://github.com/anthropics/claude-co
 
 ## Installation
 
-To install `claude-chat` search for [claude-chat](https://web.pulsar-edit.dev/packages/claude-chat) in the Install pane of the Pulsar settings or run `ppm install claude-chat`. Alternatively, you can run `ppm install asiloisad/pulsar-claude-chat` to install a package directly from the GitHub repository.
+To install `claude-chat` search for [claude-chat](https://web.pulsar-edit.dev/packages/claude-chat) in the Install pane of the Pulsar settings or run `ppm install claude-chat`. Alternatively, you can run `ppm install asiloisad-pulsar/claude-chat` to install a package directly from the GitHub repository.
 
 The Claude code terminal version is required. Please refer to the [Quickstart](https://code.claude.com/docs/en/quickstart) guide for more details.
 
